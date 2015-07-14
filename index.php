@@ -58,14 +58,16 @@
 	</script>
 
     <script type="text/javascript">
+        //Térelválasztók modal
         $(document).ready(function() {
+            $('#terelvalasztok-orbit').orbit({timer: false}); // create an Orbit instance
             setTimeout(function(){
-                $("#terelvalasztok-Modal").reveal();
+                //$("#terelvalasztok-Modal").reveal(); // Modal window auto-reveal turned off
                 $('#modal-img-rotate').orbit({animation: 'fade', animationSpeed: 1200, directionalNav: false, timer: true});
             }, 1000);
 
             setTimeout(function() {
-                $('#terelvalasztok-Modal').trigger('reveal:close')
+                //$('#terelvalasztok-Modal').trigger('reveal:close')
             }, 17000);
 
             $('#cancel').click(function() {
@@ -106,18 +108,25 @@
   	  <div class="clearall"></div>
     <img src="images/contentheader1.png" width="97%" /></div>
     <div class="clearall"></div>
-<!-- <div class="nyitva">
-		<p><strong>Tisztelt Partnerünk!</strong></p>
+<!--
+  <div class="nyitva">
+		<p><strong>Tisztelt Partnereink!</strong></p>
 		<br>
-		<p>Ezúton értesitjük Önöket, hogy cégünk 2012. december 22. és 2013. január 2. között zárva tart.</p>
+		<p>Ezúton tájékoztatjuk Önöket cégünk évvégi munkarendjéről:</p>
     	<br>
-		<p><strong>Nyitás</strong>: 2013. január 3-án, csütörtökön 7 órakor</p>
+		<p>2014. december 22. hétfő Nyitvatartás: 7-13 óra</p>
 		<br>
-		<p><strong>Kivánunk egyúttal minden kedves partnerünknek Békés Boldog Karácsonyi Ünnepeket valamint sikeres Újesztendőt!</strong></p>
+		<p>2014. december 23. kedd Nyitvatartás: 7-13 óra</p>
 		<br>
-		<p>Lenkei Bútorszerelvény Kft.</p>
-		<p>2012. december</p>
-	</div> -->
+		<p>2014. december 24. - 2015. január 4. között ZÁRVA leszünk.</p>
+		<br>
+		<p>2015. január 5. hétfő LELTÁR</p>
+		<br>
+		<p>2015. január 6. kedd Nyitás: 7 órakor</p>
+		<br>
+		<p><strong>Minden kedves partnerünknek Boldog Karácsonyi Ünnepeket<br>és sikerekben gazdag Újesztendőt kivánunk!</strong></p>
+  </div>
+-->
     <!-- <div class="nyitva">
 		<p><strong>Újabb akcióink hamarosan elérhetőek!</strong></p>
 		<p><strong>Ünnepi nyitva tartás</strong></p>
@@ -135,6 +144,7 @@
     
     <ul class="contentlist2">
         <!-- ÚJDONSÁGOK -->
+<!--
         <li class="content2">
             <a href="akciok2.php"><img src="images/akciok/grass_tn.jpg" /></a>
         </li>
@@ -143,6 +153,16 @@
           <p>GRASS komfort fiókcsúszók</p>
           <p class="contentreszlet"><a href="akciok2.php">részletek...</a></p>
         </li>
+-->
+        <li class="content2">
+          <a href="henkel_technomelt.php"><img src="images/akciok/henkel_tn.jpg" /></a>
+        </li>
+        <li class="content1">
+          <a href="henkel_technomelt.php" style="display: block;"><h3 style="font-size: 15px; line-height: 1.2em">Henkel Technomelt ömledékragasztók nagykereskedelme</h3></a>
+          <p style="font-size: 10px; line-height: 1.2em; margin-top: 35px;">Széles választék, kedvező árak, szaktanácsadás, mintaküldő szolgáltatás, áruküldés futárszolgálattal.</p>
+          <!-- <p class="contentreszlet"><a href="#">részletek...</a></p> -->
+        </li>
+
 <!--
         <li id="content2">
             <a href="ujdonsag.php"><img src="ujdonsagok/jowat.jpg" border="0" /></a>
@@ -155,18 +175,27 @@
 -->
         <!-- AKCIÓK -->
         <li class="content2">
-          <a href="akciok.php"><img src="images/akciok/mirka_logo_tn.jpg" /></a>
+          <a href="letoltes/elektromos_emelok.pdf"><img src="elektromos_emelok_tn.jpg" /></a>
         </li>
         <li class="content2">
-          <a href="akciok.php"><h3>AKCIÓS TERMÉKEK</h3></a>
-          <p>Akciós <br />Mirka termékeink</p>
-          <!-- <p>Cégünk 20 éves évfordulója alkalmából egységesn -20 % kedvezményt adunk az alábbi termékekből</p> -->
-          <p class="contentreszlet"><a href="akciok.php">részletek...</a></p><!-- <a href="akciok.php"><img src="images/akciobadge_20ev.png" alt="" style="position: relative; top: -90px; left: -180px; width: 80px; border:none"/> --></a>
+          <a href="letoltes/elektromos_emelok.pdf"><h3>Elektromos emelők</h3></a>
+          <!-- <p>Akciós <br />Mirka termékeink</p> -->
+          <p class="contentreszlet"><a href="letoltes/elektromos_emelok.pdf">részletek...</a></p></a>
         </li>
     </ul>
 
     <ul class="contentlist2">
-        <!-- Térelválasztók -->
+        <!-- Újdonságok -->
+        <li class="content2">
+          <a href="ujdonsag.php" id="launch-gallery1"><img src="ragaszto_tn.jpg" /></a>
+        </li>
+        <li class="content2">
+          <a href="ujdonsag.php" id="launch-gallery2"><h3>ÚJDONSÁGOK</h3></a>
+          <p>Faipari ragasztó</p>
+          <p class="contentreszlet"><a href="ujdonsag.php" id="launch-gallery3">részletek...</a></p>
+        </li>
+        <!-- Térelválasztók modal -->
+<!-- 
         <li class="content2">
           <a href="#" id="launch-gallery1"><img src="images/terelvalasztok/terelvalasztok_tn.jpg" /></a>
         </li>
@@ -175,6 +204,29 @@
           <p>Irodai térelválasztó paraván vázrendszerek</p>
           <p class="contentreszlet"><a href="#" id="launch-gallery3">részletek...</a></p>
         </li>
+ -->
+        <!-- AKCIÓK HAEFELE-->
+        <li class="content2">
+          <a href="#"><img src="images/akciok/hafele_tn.jpg" /></a>
+        </li>
+        <li class="content2">
+          <!-- <a href="akciok_haefele.php"><h3>AKCIÓS TERMÉKEK</h3></a> -->
+          <p><strong>Új, ALACSONYABB árak minden Häfele termékre!</strong> Gyors, rugalmas beszerzés.</p>
+          <p class="contentreszlet"><a href="#">Kérje árajánlatunkat!</a></p></a>
+        </li>
+    </ul>
+
+    <ul class="contentlist2">
+        <!-- Térelválasztók modal -->
+        <li class="content2">
+          <!-- <a href="#" id="launch-gallery1"><img src="images/terelvalasztok/terelvalasztok_tn.jpg" /></a> -->
+        </li>
+        <li class="content2">
+          <!-- <a href="#" id="launch-gallery2"><h3>ÚJDONSÁG</h3></a> -->
+          <!-- <p>Irodai térelválasztó paraván vázrendszerek</p> -->
+          <!-- <p class="contentreszlet"><a href="#" id="launch-gallery3">részletek...</a></p> -->
+        </li>
+
     </ul>
     
     </div>
